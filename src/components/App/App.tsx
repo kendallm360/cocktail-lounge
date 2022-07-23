@@ -1,40 +1,49 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import RandomContainer from "../RandomContainer/RandomContainer";
 import { fetchRandomDrinks } from "../../apiCalls";
 
-interface IState {
-  randomDrinks: object;
-}
+type IState = {
+  // randomDrinks: RandomDrink{};
+  strDrink: string;
+  strDrinkThumb: string;
+};
+
+// type RandomDrink = {
+//   strDrink: string;
+//   strDrinkThumb: string;
+// };
 
 // let printName: (name: string) => void;
 
 // let setState: (randomDrinks: string) => string
 
-class App extends Component {
+class App extends React.Component<{}, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      randomDrinks: {},
+      // randomDrinks: {},
+      strDrink: "",
+      strDrinkThumb: "",
     };
   }
 
   componentDidMount = () => {
     fetchRandomDrinks().then((data) => {
-      // console.log(typeof data.drinks[0]);
       this.setState({
-        randomDrinks: data.drinks[0],
+        strDrink: data.drinks[0].strDrink,
+        strDrinkThumb: data.drinks[0].strDrinkThumb,
       });
     });
   };
 
   render() {
-    // console.log(this.state.randomDrinks);
+    console.log(this.state);
     return (
       <div className="App">
         <NavBar />
-        <RandomContainer />
+        <RandomContainer randomDrinks={this.state} />
       </div>
     );
   }
