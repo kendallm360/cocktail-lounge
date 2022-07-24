@@ -4,10 +4,6 @@ import "./RandomContainer.css";
 
 type RandomDrinks = {
   randomDrinks: object[];
-  //Why do we have to sepearate the declarations
-  //why cant we just declare it this way below?
-  //   strDrink: string;
-  //   strDrinkThumb: string;
 };
 
 type Drink = {
@@ -27,17 +23,7 @@ const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
       />
     );
   });
-  // let allDrinks = rando
-  return (
-    <div className="random-container">
-      Random
-      {/* <h2>{randomDrinks.strDrink}</h2>
-      <img src={randomDrinks.strDrinkThumb} /> */}
-      {/* <h2>{randomDrinks.strDrink1}</h2>
-      <img src={randomDrinks.strDrinkThumb1} /> */}
-      {allDrinks}
-    </div>
-  );
+  return <div className="random-container">{allDrinks}</div>;
 };
 
 export default RandomContainer;

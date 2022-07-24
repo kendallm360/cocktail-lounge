@@ -5,35 +5,14 @@ import RandomContainer from "../RandomContainer/RandomContainer";
 import { fetchRandomDrinks, fetchAllCocktails } from "../../apiCalls";
 
 type IState = {
-  // randomDrinks: RandomDrink{};
-  // idDrink: string;
-  // strDrink: string;
-  // strDrinkThumb: string;
   drinkArray: object[];
-  // strDrink1: string;
-  // strDrinkThumb1: string;
 };
-
-// type RandomDrink = {
-//   strDrink: string;
-//   strDrinkThumb: string;
-// };
-
-// let printName: (name: string) => void;
-
-// let setState: (randomDrinks: string) => string
 
 class App extends React.Component<{}, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      // randomDrinks: {},
-      // idDrink: "",
-      // strDrink: "",
-      // strDrinkThumb: "",
       drinkArray: [],
-      // strDrink1: "",
-      // strDrinkThumb1: "",
     };
   }
 
@@ -51,16 +30,6 @@ class App extends React.Component<{}, IState> {
     //   });
     // });
     fetchAllCocktails().then((data) => {
-      // let test = data.drinks.map((e: object) => {
-      //   console.log(e, "<<<<");
-      //   return this.setState({
-      //     idDrink: e.idDrink,
-      //     strDrink: e.strDrink,
-      //     strDrinkThumb: e.strDrinkThumb,
-      //   });
-      // });
-      // console.log(test, "test");
-      // return test;
       this.setState({
         drinkArray: data.drinks,
       });
@@ -68,7 +37,7 @@ class App extends React.Component<{}, IState> {
   };
 
   render() {
-    console.log(this.state.drinkArray);
+    // console.log(this.state.drinkArray);
     return (
       <div className="App">
         <NavBar />
