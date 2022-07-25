@@ -14,6 +14,12 @@ type Drink = {
 
 const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
   console.log(randomDrinks);
+
+    const getRandomDrink = () => {
+      return Math.floor(Math.random() * randomDrinks.length)
+    }
+    console.log('21', getRandomDrink());
+    
   let allDrinks = randomDrinks.map((drink: Drink) => {
     return (
       <RandomDrinkCards
@@ -22,7 +28,7 @@ const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
         strDrinkThumb={drink.strDrinkThumb}
       />
     );
-  });
+  }).splice(getRandomDrink(), 4)
   return <div className="random-container">{allDrinks}</div>;
 };
 
