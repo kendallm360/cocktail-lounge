@@ -1,0 +1,10 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 5px solid teal;
+}
+
+.favorite-button {
+  margin-left: 50em;
+}
