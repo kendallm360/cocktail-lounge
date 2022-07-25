@@ -3,7 +3,7 @@ import RandomDrinkCards from "../randomDrinkCards/RandomDrinkCards";
 import "./RandomContainer.css";
 
 type RandomDrinks = {
-  randomDrinks: object[];
+  randomDrinks: Drink[];
 };
 
 type Drink = {
@@ -14,7 +14,7 @@ type Drink = {
 
 const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
   console.log(randomDrinks);
-  let allDrinks = randomDrinks.map((drink: object) => {
+  let allDrinks = randomDrinks.map((drink: Drink) => {
     return (
       <RandomDrinkCards
         idDrink={drink.idDrink}

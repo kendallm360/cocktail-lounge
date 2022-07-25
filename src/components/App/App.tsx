@@ -5,7 +5,13 @@ import RandomContainer from "../RandomContainer/RandomContainer";
 import { fetchRandomDrinks, fetchAllCocktails } from "../../apiCalls";
 
 type IState = {
-  drinkArray: object[];
+  drinkArray: Drink[];
+};
+
+type Drink = {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
 };
 
 class App extends React.Component<{}, IState> {
