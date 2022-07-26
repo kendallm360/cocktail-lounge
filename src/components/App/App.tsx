@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import RandomContainer from "../RandomContainer/RandomContainer";
+import SpecialtyContainer from "../SpecialtyContainer/SpecialtyContainer";
 import { fetchAllCocktails } from "../../apiCalls";
 
 
@@ -46,6 +47,7 @@ class App extends React.Component<{}, IState> {
           <RandomContainer 
             randomDrinks={this.state.drinkArray}     
           />
+          <SpecialtyContainer />
       </div>
       )
   }

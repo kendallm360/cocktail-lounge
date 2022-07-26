@@ -4,4 +4,6 @@ const fetchAllCocktails = () => {
   ).then((response) => response.json());
 };
 
+// https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
+
 export { fetchAllCocktails };
