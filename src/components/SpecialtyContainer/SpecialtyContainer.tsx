@@ -12,7 +12,8 @@ class SpecialtyContainer extends Component {
 
     render() {
         return (
-            <div className="specialtyContainer">MartiniHERE
+            <div className="specialtyContainer">
+    
                 <MartiniContainer />
             </div>
         )
