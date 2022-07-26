@@ -13,17 +13,21 @@ type Drink = {
 };
 
 const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
-  console.log(randomDrinks);
+    
   let allDrinks = randomDrinks.map((drink: Drink) => {
     return (
       <RandomDrinkCards
         idDrink={drink.idDrink}
         strDrink={drink.strDrink}
         strDrinkThumb={drink.strDrinkThumb}
+        key={drink.idDrink}
       />
     );
-  });
-  return <div className="random-container">{allDrinks}</div>;
+  })
+
+  return  <div className="random-container">
+            {allDrinks}
+          </div>;
 };
 
 export default RandomContainer;

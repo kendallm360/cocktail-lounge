@@ -2,7 +2,8 @@ import React from "react";
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import RandomContainer from "../RandomContainer/RandomContainer";
-import { fetchRandomDrinks, fetchAllCocktails } from "../../apiCalls";
+import { fetchAllCocktails } from "../../apiCalls";
+
 
 type IState = {
   drinkArray: Drink[];
@@ -22,35 +23,33 @@ class App extends React.Component<{}, IState> {
     };
   }
 
-  componentDidMount = () => {
-    // fetchRandomDrinks().then((data) => {
-    //   this.setState({
-    //     strDrink: data.drinks[0].strDrink,
-    //     strDrinkThumb: data.drinks[0].strDrinkThumb,
-    //   });
-    // });
-    // fetchRandomDrinks().then((data) => {
-    //   this.setState({
-    //     strDrink1: data.drinks[0].strDrink,
-    //     strDrinkThumb1: data.drinks[0].strDrinkThumb,
-    //   });
-    // });
+  getRandomDrink = (drinkArray: Drink[]) => {
+    const shuffled = drinkArray.sort(() => 0.5 - Math.random());
+  
+    return shuffled.slice(0, 4);
+  }
+  
+  componentDidMount = () => {  
     fetchAllCocktails().then((data) => {
+      console.log('line 50', this.state.drinkArray);
+      
       this.setState({
-        drinkArray: data.drinks,
-      });
+        drinkArray: this.getRandomDrink(data.drinks)
+      })  
     });
   };
-
-  render() {
-    // console.log(this.state.drinkArray);
-    return (
-      <div className="App">
-        <NavBar />
-        <RandomContainer randomDrinks={this.state.drinkArray} />
+  
+  render() {  
+      return (
+        <div className="App">
+          <NavBar />
+          <RandomContainer 
+            randomDrinks={this.state.drinkArray}     
+          />
       </div>
-    );
+      )
   }
 }
+
 
 export default App;
