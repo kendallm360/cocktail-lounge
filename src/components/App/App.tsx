@@ -31,28 +31,18 @@ class App extends React.Component<{}, IState> {
     };
   }
 
-  componentDidMount = () => {
-    // const getRandomDrink = (drinkArray: Drink[]) => {
-    //   return Math.floor(Math.random() * drinkArray.length)
-    // }
-    // fetchRandomDrinks().then((data) => {
-    //   this.setState({
-    //     strDrink: data.drinks[0].strDrink,
-    //     strDrinkThumb: data.drinks[0].strDrinkThumb,
-    //   });
-    // });
-    // fetchRandomDrinks().then((data) => {
-    //   this.setState({
-    //     strDrink1: data.drinks[0].strDrink,
-    //     strDrinkThumb1: data.drinks[0].strDrinkThumb,
-    //   });
-    // });
+  getRandomDrink = (drinkArray: Drink[]) => {
+    return Math.floor(Math.random() * drinkArray.length)
+  }
+  
+  componentDidMount = () => {  
     fetchAllCocktails().then((data) => {
-      // console.log();
+      // const newRandomDrink = data.drinks[getRandomDrink(data.drinks)]
+      console.log('line 41', data.drinks);
+      console.log('line 42', this.state.drinkArray);
       
-      // const newRandomDrink = data.drinkArray[getRandomDrink(data.drinkArray)]
       this.setState({
-        drinkArray: data.drinks,
+        drinkArray: data.drinks[this.getRandomDrink(data.drinks)],
         // randomDrink: newRandomDrink
       })
     });
@@ -63,7 +53,10 @@ class App extends React.Component<{}, IState> {
     return (
       <div className="App">
         <NavBar />
-        <RandomContainer randomDrinks={this.state.drinkArray} />
+        <RandomContainer 
+        randomDrinks={this.state.drinkArray} 
+        
+        />
       </div>
     );
   }
