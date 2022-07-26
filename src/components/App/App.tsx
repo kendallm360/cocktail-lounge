@@ -32,26 +32,37 @@ class App extends React.Component<{}, IState> {
   }
 
   getRandomDrink = (drinkArray: Drink[]) => {
-    return Math.floor(Math.random() * drinkArray.length)
+    // return Math.floor(Math.random() * drinkArray.length)
+    // Shuffle array
+  const shuffled = drinkArray.sort(() => 0.5 - Math.random());
+  console.log('shuffled', shuffled);
+  
+  // Get sub-array of first n elements after shuffled
+  return shuffled.slice(0, 4);
   }
+  
+  
   
   componentDidMount = () => {  
     fetchAllCocktails().then((data) => {
       // const newRandomDrink = data.drinks[getRandomDrink(data.drinks)]
-      console.log('line 41', data.drinks);
-      console.log('line 42', this.state.drinkArray);
+      console.log('line 49', data.drinks);
+      console.log('line 50', this.state.drinkArray);
       
       this.setState({
-        drinkArray: data.drinks[this.getRandomDrink(data.drinks)],
+        drinkArray: this.getRandomDrink(data.drinks),
         // randomDrink: newRandomDrink
       })
+      // console.log('56', this.getRandomDrink());
+      
     });
   };
-
+  
   render() {
     // console.log(this.state.drinkArray);
     return (
       <div className="App">
+        {/* {console.log('4 randoms?', this.getRandomDrink())}; */}
         <NavBar />
         <RandomContainer 
         randomDrinks={this.state.drinkArray} 
