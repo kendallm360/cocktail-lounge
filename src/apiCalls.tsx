@@ -9,7 +9,7 @@ const fetchSpecialtyCocktails = () => {
   let amaretto = "search.php?s=amaretto"
   let bourbon = "filter.php?i=Bourbon"
   return fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/${martini}`
+    `https://www.thecocktaildb.com/api/json/v1/1/${bourbon}`
   ).then((response) => response.json());
 };
 
