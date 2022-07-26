@@ -9,12 +9,13 @@
 }
 
 .drink-card {
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .drink-image {
   display: flex;
   flex-direction: column;
-  height: 350px;
-  width: 350px;
+  height: 80%;
+  width: 80%;
+  margin-top: 10%;
 }
