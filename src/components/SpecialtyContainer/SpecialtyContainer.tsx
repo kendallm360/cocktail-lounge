@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import"./SpecialtyContainer.css"
 import MartiniContainer from "../MartiniContainer/MartiniContainer"
 import { fetchSpecialtyCocktails } from "../../apiCalls"
+import MartiniImage from "../../../src/Martini.jpeg"
 
 type SpecialtyState = {
     martiniDrinks: Drink[]
@@ -47,7 +48,6 @@ class SpecialtyContainer extends Component<{}, SpecialtyState> {
     render() {
         return (
             <div className="specialtyContainer">
-    
                 <MartiniContainer martiniDrinks={this.state.martiniDrinks}/>
             </div>
         )
