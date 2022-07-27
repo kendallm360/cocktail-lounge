@@ -25,26 +25,27 @@ type SpecialtyDrink = {
     strIngredient10?: string | null;
     strIngredient11?: string | null;
 };
-const MartiniDeck: FC<SpecialtyDrink> = ({
-    idDrink,
-    strDrink,
-    strDrinkThumb,
-    strInstructions,
-    strIngredient1,
-    strIngredient2,
-    strIngredient3,
-    strIngredient4,
-    strIngredient5,
-    strIngredient6,
-    strIngredient7,
-    strIngredient8,
-    strIngredient9,
-    strIngredient10,
-    strIngredient11}) => {
+const MartiniDeck: FC<SpecialtyDrink> = ({ martiniDrink: SpecialtyDrink
+    // idDrink,
+    // strDrink,
+    // strDrinkThumb,
+    // strInstructions,
+    // strIngredient1,
+    // strIngredient2,
+    // strIngredient3,
+    // strIngredient4,
+    // strIngredient5,
+    // strIngredient6,
+    // strIngredient7,
+    // strIngredient8,
+    // strIngredient9,
+    // strIngredient10,
+    // strIngredient11
+}) => {
 
-
+//START HERE!!!!!! map over and use martiniDeck
     return(
-        <div className="martiniContainer">
+        <div className="martiniContainer"> YAY DECKK
             <div className="drink-card">
             <h1>{strDrink}</h1>
             <img className="drink-image" src={strDrinkThumb}/>
