@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./MartiniContainer.css"
-import MartiniImage from "../../../src/Martini.jpeg"
+import MartiniImage from "../../images/martiniOlive.jpeg"
 import MartiniDeck from "../MartiniDeck/MartiniDeck"
 import { fetchSpecialtyCocktails } from "../../apiCalls"
 // import { Route } from "react-router-dom"

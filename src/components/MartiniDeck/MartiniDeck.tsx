@@ -1,5 +1,6 @@
 import { FC } from "react"
 import "./MartiniDeck.css"
+import MartiniContainer from "../MartiniContainer/MartiniContainer"
 
 
 type SpecialtyState = {
@@ -12,43 +13,36 @@ type SpecialtyDrink = {
     idDrink: string;
     strDrink: string;
     strDrinkThumb: string;
-    strInstructions?: string | null;
-    strIngredient1?: string | null;
-    strIngredient2?: string | null;
-    strIngredient3?: string | null;
-    strIngredient4?: string | null;
-    strIngredient5?: string | null;
-    strIngredient6?: string | null;
-    strIngredient7?: string | null;
-    strIngredient8?: string | null;
-    strIngredient9?: string | null;
-    strIngredient10?: string | null;
-    strIngredient11?: string | null;
+    // strInstructions?: string | null;
+    // strIngredient1?: string | null;
+    // strIngredient2?: string | null;
+    // strIngredient3?: string | null;
+    // strIngredient4?: string | null;
+    // strIngredient5?: string | null;
+    // strIngredient6?: string | null;
+    // strIngredient7?: string | null;
+    // strIngredient8?: string | null;
+    // strIngredient9?: string | null;
+    // strIngredient10?: string | null;
+    // strIngredient11?: string | null;
 };
-const MartiniDeck: FC<SpecialtyDrink> = ({ martiniDrink: SpecialtyDrink
-    // idDrink,
-    // strDrink,
-    // strDrinkThumb,
-    // strInstructions,
-    // strIngredient1,
-    // strIngredient2,
-    // strIngredient3,
-    // strIngredient4,
-    // strIngredient5,
-    // strIngredient6,
-    // strIngredient7,
-    // strIngredient8,
-    // strIngredient9,
-    // strIngredient10,
-    // strIngredient11
-}) => {
 
-//START HERE!!!!!! map over and use martiniDeck
+const MartiniDeck: FC<SpecialtyState> = ({ martiniDrinks }) => {
+  
+    let allMartinis = martiniDrinks.map((martini: SpecialtyDrink) => {
+         return (
+                <div>
+                    <h1>{martini.strDrink}</h1>
+                    <img src={martini.strDrinkThumb}/>
+                </div>
+    )})
+
     return(
-        <div className="martiniContainer"> YAY DECKK
-            <div className="drink-card">
+        <div className="martiniContainer">
+            {allMartinis}
+            {/* <div className="drink-card">
             <h1>{strDrink}</h1>
-            <img className="drink-image" src={strDrinkThumb}/>
+            <img className="drink-image" src={strDrinkThumb}/> */}
             {/* <div className="details">
                 <p className="ingredients">
                     {strIngredient1} <br/>
@@ -65,7 +59,7 @@ const MartiniDeck: FC<SpecialtyDrink> = ({ martiniDrink: SpecialtyDrink
                 </p> */}
                 {/* <div className="instructions">{strInstructions}</div>
             </div> */}
-        </div>
+        {/* </div> */}
     </div>
     )
 }
