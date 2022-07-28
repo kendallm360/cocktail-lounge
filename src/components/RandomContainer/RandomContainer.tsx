@@ -1,19 +1,9 @@
 import { FC } from "react";
-import RandomDrinkCards from "../randomDrinkCards/RandomDrinkCards";
+import RandomDrinkCards from "../RandomDrinkCards/RandomDrinkCards";
+import { Drink, RandomDrinks } from "../typeScriptImports";
 import "./RandomContainer.css";
 
-type RandomDrinks = {
-  randomDrinks: Drink[];
-};
-
-type Drink = {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
-};
-
 const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
-    
   let allDrinks = randomDrinks.map((drink: Drink) => {
     return (
       <RandomDrinkCards
@@ -23,11 +13,9 @@ const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
         key={drink.idDrink}
       />
     );
-  })
+  });
 
-  return  <div className="random-container">
-            {allDrinks}
-          </div>;
+  return <div className="random-container">{allDrinks}</div>;
 };
 
 export default RandomContainer;
