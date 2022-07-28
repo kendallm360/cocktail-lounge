@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./MartiniDeck.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { SpecialtyDrink, SpecialtyState } from "../typeScriptImports";
+import { SpecialtyDrink, SpecialtyState } from "../Types";
 
 class MartiniDeck extends Component<{}, SpecialtyState> {
   constructor(props: any) {
@@ -12,7 +12,7 @@ class MartiniDeck extends Component<{}, SpecialtyState> {
   }
 
   componentDidMount = () => {
-    fetchSpecialtyCocktails().then((data) => {
+    fetchSpecialtyCocktails("search.php?s=martini").then((data) => {
       this.setState({ martiniDrinks: data.drinks });
     });
   };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./MartiniContainer.css";
 import MartiniImage from "../../images/martiniOlive.jpeg";
 import { Link } from "react-router-dom";
-import { Props, SpecialtyState } from "../typeScriptImports";
+import { Props, SpecialtyState } from "../Types";
 
 class MartiniContainer extends Component<{}, SpecialtyState> {
   constructor(props: Props) {

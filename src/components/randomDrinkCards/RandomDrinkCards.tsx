@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Drink } from "../typeScriptImports";
+import { Drink } from "../Types";
 import "./RandomDrinkCards.css";
 
 const RandomDrinkCards: FC<Drink> = ({ strDrink, strDrinkThumb, idDrink }) => {

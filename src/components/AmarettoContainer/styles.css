@@ -1,0 +1,24 @@
+.amarettoButton {
+  border: 2px solid teal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.amarettoButton:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.3s;
+  filter: brightness(120%);
+}
+
+.amarettoImage {
+  height: 275px;
+  width: 275px;
+}

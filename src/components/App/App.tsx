@@ -6,7 +6,8 @@ import SpecialtyContainer from "../SpecialtyContainer/SpecialtyContainer";
 import { fetchAllCocktails } from "../../apiCalls";
 import { Route } from "react-router-dom";
 import MartiniDeck from "../MartiniDeck/MartiniDeck";
-import { Drink, IState } from "../typeScriptImports";
+import { Drink, IState } from "../Types";
+import AmarettoDeck from "../AmarettoDeck";
 
 class App extends React.Component<{}, IState> {
   constructor(props: any) {
@@ -43,6 +44,10 @@ class App extends React.Component<{}, IState> {
 
         <Route exact path="/MartiniDeck">
           <MartiniDeck />
+        </Route>
+
+        <Route exact path="/AmarettoDeck">
+          <AmarettoDeck />
         </Route>
       </div>
     );

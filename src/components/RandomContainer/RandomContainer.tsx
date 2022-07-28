@@ -1,6 +1,6 @@
 import { FC } from "react";
 import RandomDrinkCards from "../RandomDrinkCards/RandomDrinkCards";
-import { Drink, RandomDrinks } from "../typeScriptImports";
+import { Drink, RandomDrinks } from "../Types";
 import "./RandomContainer.css";
 
 const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {

@@ -1,17 +1,17 @@
+const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/";
+
 const fetchAllCocktails = () => {
-  return fetch(
-    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass"
-  ).then((response) => response.json());
+  return fetch(`${baseURL}filter.php?g=Cocktail_glass`).then((response) =>
+    response.json()
+  );
 };
 
-const fetchSpecialtyCocktails = () => {
-  let martini = "search.php?s=martini"
-  let amaretto = "search.php?s=amaretto"
-  let bourbon = "filter.php?i=Bourbon"
-  return fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/${martini}`
-  ).then((response) => response.json());
+const fetchSpecialtyCocktails = (specialtyDrink: string | undefined) => {
+  return fetch(`${baseURL}${specialtyDrink}`).then((response) =>
+    response.json()
+  );
 };
 
+// www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
 export { fetchAllCocktails, fetchSpecialtyCocktails };
