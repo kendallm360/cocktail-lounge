@@ -13,11 +13,5 @@ const fetchSpecialtyCocktails = () => {
   ).then((response) => response.json());
 };
 
-// const getSpecialEndpoint = () => {
-//   const martini = "search.php?s=martini"
-//   const amaretto = "search.php?s=amaretto"
-//   const bourbon = "filter.php?i=Bourbon"
-// }
-
 
 export { fetchAllCocktails, fetchSpecialtyCocktails };
