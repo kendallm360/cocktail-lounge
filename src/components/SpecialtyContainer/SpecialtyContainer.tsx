@@ -1,15 +1,15 @@
-import { FC } from "react"
-import"./SpecialtyContainer.css"
-import MartiniContainer from "../MartiniContainer/MartiniContainer"
-
+import { FC } from "react";
+import "./SpecialtyContainer.css";
+import MartiniContainer from "../MartiniContainer/MartiniContainer";
+import AmarettoContainer from "../AmarettoContainer";
 
 const SpecialtyContainer: FC = () => {
+  return (
+    <div className="specialtyContainer">
+      <MartiniContainer />
+      <AmarettoContainer />
+    </div>
+  );
+};
 
-    return(
-        <div className="specialtyContainer">
-            <MartiniContainer />
-        </div>
-    )
-}
-
-export default SpecialtyContainer
+export default SpecialtyContainer;

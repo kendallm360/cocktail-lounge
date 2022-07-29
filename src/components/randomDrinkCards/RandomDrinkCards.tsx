@@ -1,11 +1,6 @@
 import { FC } from "react";
+import { Drink } from "../Types";
 import "./RandomDrinkCards.css";
-
-type Drink = {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
-};
 
 const RandomDrinkCards: FC<Drink> = ({ strDrink, strDrinkThumb, idDrink }) => {
   return (

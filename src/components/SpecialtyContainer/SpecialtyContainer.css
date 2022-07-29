@@ -1,0 +1,7 @@
+.specialtyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+}
