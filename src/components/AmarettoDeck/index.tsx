@@ -1,24 +1,24 @@
 import { Component } from "react";
 import "./styles.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { SpecialtyDrink, SpecialtyState } from "../Types";
+import { Drink, TypeState } from "../Types";
 
-class AmarettoDeck extends Component<{}, SpecialtyState> {
+class AmarettoDeck extends Component<{}, TypeState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      martiniDrinks: [],
+      drinkList: [],
     };
   }
 
   componentDidMount = () => {
     fetchSpecialtyCocktails("search.php?s=amaretto").then((data) => {
-      this.setState({ martiniDrinks: data.drinks });
+      this.setState({ drinkList: data.drinks });
     });
   };
 
   formatAmarettos = () => {
-    return this.state.martiniDrinks.map((amaretto: SpecialtyDrink) => {
+    return this.state.drinkList.map((amaretto: Drink) => {
       return (
         <div>
           <h1>{amaretto.strDrink}</h1>

@@ -12,6 +12,7 @@ const fetchSpecialtyCocktails = (specialtyDrink: string | undefined) => {
   );
 };
 
+// const;
 // www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
 export { fetchAllCocktails, fetchSpecialtyCocktails };

@@ -1,10 +1,10 @@
 import { FC } from "react";
 import RandomDrinkCards from "../RandomDrinkCards/RandomDrinkCards";
-import { Drink, RandomDrinks } from "../Types";
+import { Drink, TypeState } from "../Types";
 import "./RandomContainer.css";
 
-const RandomContainer: FC<RandomDrinks> = ({ randomDrinks }) => {
-  let allDrinks = randomDrinks.map((drink: Drink) => {
+const RandomContainer: FC<TypeState> = ({ drinkList }) => {
+  let allDrinks = drinkList.map((drink: Drink) => {
     return (
       <RandomDrinkCards
         idDrink={drink.idDrink}

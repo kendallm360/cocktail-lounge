@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./MartiniContainer.css";
 import MartiniImage from "../../images/martiniOlive.jpeg";
 import { Link } from "react-router-dom";
-import { Props, SpecialtyState } from "../Types";
+import { Props, TypeState } from "../Types";
 
-class MartiniContainer extends Component<{}, SpecialtyState> {
+class MartiniContainer extends Component<{}, TypeState> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      martiniDrinks: [],
+      drinkList: [],
     };
   }
 
