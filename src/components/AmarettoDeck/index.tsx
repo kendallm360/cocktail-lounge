@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./styles.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import { Drink, TypeState } from "../Types";
+import { Link } from "react-router-dom";
 
 class AmarettoDeck extends Component<{}, TypeState> {
   constructor(props: any) {
@@ -20,10 +21,12 @@ class AmarettoDeck extends Component<{}, TypeState> {
   formatAmarettos = () => {
     return this.state.drinkList.map((amaretto: Drink) => {
       return (
-        <div>
+        <Link to={`/drinks/${amaretto.idDrink}`}>
+          <div>
           <h1>{amaretto.strDrink}</h1>
           <img src={amaretto.strDrinkThumb} />
-        </div>
+          </div>
+        </Link>
       );
     });
   };
