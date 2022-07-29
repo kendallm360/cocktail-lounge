@@ -29,7 +29,7 @@ class MartiniDeck extends Component<{}, TypeState> {
     return this.state.drinkList.map((martini: Drink) => {
       //   console.log(martini);
       return (
-        <Link to={`/${martini.idDrink}`}>
+        <Link to={`/drinks/${martini.idDrink}`}>
           <div
             className="martiniDrink"
             id={martini.idDrink}

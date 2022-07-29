@@ -57,7 +57,7 @@ class App extends React.Component<{}, TypeState> {
         </Route> */}
         <Route
           exact
-          path="/:id"
+          path="/drinks/:id"
           render={({ match }) => {
             return <DetailCards id={match.params.id} />;
           }}
