@@ -22,7 +22,7 @@ class DetailCards extends Component<{ id: string }, TypeState> {
     return (
       <div className="detailCards">
         {this.state.drinkList.length && (
-          <div className="drink-card">
+          <div className="detail-drink-card">
             <h1 className="detailTitle">{this.state.drinkList[0].strDrink} </h1>
             <img
               className="drink-image"
