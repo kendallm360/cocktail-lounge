@@ -1,11 +1,11 @@
 import { Component } from "react";
 import "./styles.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { Drink, TypeState } from "../Types";
+import { Drink, Props, TypeState } from "../Types";
 import { Link } from "react-router-dom";
 
 class AmarettoDeck extends Component<{}, TypeState> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       drinkList: [],

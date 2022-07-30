@@ -1,10 +1,10 @@
 import { Component, FC } from "react";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import "./styles.css";
-import { TypeState } from "../Types";
+import { Props, TypeState } from "../Types";
 
 class DetailCards extends Component<{ id: string }, TypeState> {
-  constructor(props: any) {
+  constructor(props: { id: string; } | Readonly<{ id: string; }>) {
     super(props);
     this.state = {
       drinkList: [],
@@ -12,7 +12,6 @@ class DetailCards extends Component<{ id: string }, TypeState> {
   }
 
   componentDidMount = () => {
-    console.log(this.props.id, "CDM");
     fetchSpecialtyCocktails(`lookup.php?i=${this.props.id}`).then((data) => {
       this.setState({ drinkList: data.drinks });
     });
@@ -26,8 +25,7 @@ class DetailCards extends Component<{ id: string }, TypeState> {
             <h1 className="detailTitle">{this.state.drinkList[0].strDrink} </h1>
             <img
               className="drink-image"
-              src={this.state.drinkList[0].strDrinkThumb}
-            />
+              src={this.state.drinkList[0].strDrinkThumb}/>
             <p className="ingredients">
               <h2 className="ingredientsTitle">Ingredients</h2>
               <br />

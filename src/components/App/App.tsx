@@ -6,12 +6,12 @@ import SpecialtyContainer from "../SpecialtyContainer/SpecialtyContainer";
 import { fetchAllCocktails } from "../../apiCalls";
 import { Route } from "react-router-dom";
 import MartiniDeck from "../MartiniDeck/MartiniDeck";
-import { Drink, TypeState } from "../Types";
+import { Drink, Props, TypeState } from "../Types";
 import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
 
 class App extends React.Component<{}, TypeState> {
-  constructor(props: any) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       drinkList: [],
@@ -51,10 +51,7 @@ class App extends React.Component<{}, TypeState> {
         <Route exact path="/AmarettoDeck">
           <AmarettoDeck />
         </Route>
-
-        {/* <Route exact path="/:id">
-          <DetailCards />
-        </Route> */}
+        
         <Route
           exact
           path="/drinks/:id"
