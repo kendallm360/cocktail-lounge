@@ -57,12 +57,6 @@ describe('App spec', () => {
   //     .get('.error').should('have.text', 'Not Found')
   // })
 
-
-  // should no longer see the main page, but should be routed to a new page and only see that specific drink with its photo, ingredients, and recipe displayed when a drink card is clicked
-  // should be able to click on the title in the Navbar or back arrow to return to the home page
-  // after I click on a specialty card, I should no longer see the main page, I should see a page with several drinks corresponding to the category I clicked on
-  
-  
   
   //As a user, I should be able to click on the randomize button to see 4 new cocktail images and names displayed. #9
   //As a user, when on the detail view page, I should be able to click on the favorite icon to store my recipe in a favorites category #12
