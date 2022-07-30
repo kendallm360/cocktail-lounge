@@ -9,6 +9,7 @@ class AmarettoDeck extends Component<{}, TypeState> {
     super(props);
     this.state = {
       drinkList: [],
+      error: false,
     };
   }
 

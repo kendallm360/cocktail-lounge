@@ -10,6 +10,7 @@ class MartiniDeck extends Component<{}, TypeState> {
     this.state = {
       drinkList: [],
       id: "",
+      error: false,
     };
   }
 

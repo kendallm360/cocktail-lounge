@@ -8,6 +8,7 @@ class DetailCards extends Component<{ id: string }, TypeState> {
     super(props);
     this.state = {
       drinkList: [],
+      error: false,
     };
   }
 

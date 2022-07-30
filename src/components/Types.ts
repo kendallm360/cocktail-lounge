@@ -1,6 +1,7 @@
 export type TypeState = {
   drinkList: Drink[];
   id?: string;
+  error: false | true
 };
 
 export type Drink = {
