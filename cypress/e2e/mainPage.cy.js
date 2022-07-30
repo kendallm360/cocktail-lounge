@@ -46,16 +46,16 @@ describe('App spec', () => {
   })
 
   //ISSUE TO RESOLVE
-  // it('should return an error message if a network request fails', () => {
-  //   cy.visit('http://localhost:3000/')
-  //   cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', {
-  //       statusCode: 404,
-  //       body: {
-  //         error: 'Not Found'
-  //       }
-  //     })
-  //     .get('.error').should('have.text', 'Not Found')
-  // })
+  it('should return an error message if a network request fails', () => {
+    cy.visit('http://localhost:3000/')
+    cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', {
+        statusCode: 404,
+        body: {
+          error: 'Not Found'
+        }
+      })
+      .get('.error').should('have.value', true)
+  })
 
   
   //As a user, I should be able to click on the randomize button to see 4 new cocktail images and names displayed. #9

@@ -18,8 +18,8 @@ describe('Specific spec', () => {
 
 
     it('should be able to click on the title in the Navbar or back arrow to return to the home page', () => {
-        cy.fixture('mocktails.json').then((mocktails) => {
-            cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', mocktails)
+        // cy.fixture('mocktails.json').then((mocktails) => {
+            // cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', mocktails)
             cy.get('.martiniButton').click()
             // cy.get('.martiniDeck').first().click()
               .url().should("eq", "http://localhost:3000/MartiniDeck")
@@ -28,7 +28,26 @@ describe('Specific spec', () => {
               .go("forward")
               .url().should("eq", "http://localhost:3000/MartiniDeck")
             })
+    // })
+    
+    it('after I click on a specialty card, I should no longer see the main page, I should see a page with several drinks corresponding to the category I clicked on', () => {
+        // cy.fixture('specialtydecks.json').then((specialtydecks) => {
+        //     cy.intercept('GET', 'www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16100', specialtydecks).wait(2000)
+        cy.get('.amarettoButton').click().wait(1000)
+        .url().should("eq", "http://localhost:3000/AmarettoDeck")
+        // cy.get('.ingredientsTitle').contains('Amaretto Stone Sour Alternative') 
     })
-    // after I click on a specialty card, I should no longer see the main page, I should see a page with several drinks corresponding to the category I clicked on
+
+    it.only('should return an error message if a network request fails', () => {
+        cy.visit('http://localhost:3000/drinks/16100')
+        cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16100', {
+        statusCode: 404,
+        body: {
+          error: 'Cannot GET /lookup.php?i=16100'
+        }
+      })
+      .get('Error').should('have.value', 'Not Found')
+  })
+
 
 })
