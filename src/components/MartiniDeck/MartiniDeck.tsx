@@ -6,13 +6,11 @@ import { Link } from "react-router-dom";
 
 class MartiniDeck extends Component<{}, TypeState> {
   constructor(props: Props) {
-    
     super(props);
     this.state = {
       drinkList: [],
       id: "",
     };
-    console.log("PROPS?", this.props);
   }
 
   componentDidMount = () => {
