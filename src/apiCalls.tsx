@@ -1,4 +1,4 @@
-const baseURL = "https://www.thecocktaildb.com/api/jso/v1/1/";
+const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/";
 
 const fetchAllCocktails = () => {
   return fetch(`${baseURL}filter.php?g=Cocktail_glass`).then((response) => {

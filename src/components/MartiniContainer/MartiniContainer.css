@@ -1,5 +1,5 @@
 .martiniButton{
-    border: 2px solid teal;
+    /* border: 2px solid teal; */
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -15,7 +15,7 @@ h3{
     cursor: pointer;
     transform: scale(1.2);
     transition: all .3s;
-    filter: brightness(120%);
+    /* filter: brightness(120%); */
 }
 
 .martiniImage {

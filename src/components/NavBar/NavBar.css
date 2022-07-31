@@ -1,8 +1,12 @@
+* {
+  text-decoration: none;
+}
 .nav-bar {
+  background-color: #F6F6F6;
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 5px solid teal;
 }
 
 .favorite-button {

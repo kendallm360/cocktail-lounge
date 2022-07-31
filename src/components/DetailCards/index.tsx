@@ -25,7 +25,7 @@ class DetailCards extends Component<{ id: string }, TypeState> {
           <div className="detail-drink-card">
             <h1 className="detailTitle">{this.state.drinkList[0].strDrink} </h1>
             <img
-              className="drink-image"
+              className="detail-drink-image"
               src={this.state.drinkList[0].strDrinkThumb}/>
             <p className="ingredients">
               <h2 className="ingredientsTitle">Ingredients</h2>

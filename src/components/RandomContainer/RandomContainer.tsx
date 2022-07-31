@@ -15,7 +15,9 @@ const RandomContainer: FC<TypeState> = ({ drinkList }) => {
     );
   });
 
-  return <div className="random-container">{allDrinks}</div>;
+  return <div className="random-container">{allDrinks}
+    <button className="btn-shakeUp" onClick={() => window.location.reload()}><span>Shake it Up!</span></button>
+    </div>;
 };
 
 export default RandomContainer;

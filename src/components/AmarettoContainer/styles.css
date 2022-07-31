@@ -1,5 +1,5 @@
 .amarettoButton {
-  border: 2px solid teal;
+  /* border: 2px solid teal; */
   display: flex;
   flex-direction: column;
   justify-content: center;

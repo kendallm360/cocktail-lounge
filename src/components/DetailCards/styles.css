@@ -4,7 +4,7 @@
     background-repeat: repeat;
     /* height: 80%;
     width: 100%; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .detail-drink-card {
@@ -30,7 +30,7 @@
     top: 25%;
 }
 
-.drink-image {
+.detail-drink-image {
     grid-area: 2 / 2 / 7 / 4;
     border: 20px solid white;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
@@ -41,7 +41,7 @@
 
 .ingredients {
     background-color: #F6F6F6;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     grid-area: 2 / 4 / 4 / 4;
     border: 20px solid white;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
@@ -63,3 +63,4 @@
     width: 70%;
     padding: 20%;
 }
+
