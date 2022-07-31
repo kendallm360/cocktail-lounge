@@ -19,7 +19,6 @@ display: grid;
     flex-direction: row;
 }
 
-
 .drink-image {
     display: flex;
     flex-direction: column;
