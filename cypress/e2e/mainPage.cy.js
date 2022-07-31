@@ -14,13 +14,12 @@ describe('App spec', () => {
     cy.get('.drink-card').should('have.length', 4)
   })
   
-  //ISSUE TO RESOLVE 
   it('should be able to click on a random drink card and see a new page render with that drink cards details', () => {
     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178310', {fixture: 'randomdetails.json'})
     cy.get('.random-container').find('.drink-card').first().click()
   })
 
-  it.only("should be able to use forward and back arrows to navigate between pages", () => {
+  it("should be able to use forward and back arrows to navigate between pages", () => {
     cy.fixture('mocktails.json').then((mocktails) => {
     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', mocktails)
     cy.visit('http://localhost:3000/').wait(1000)
@@ -46,8 +45,7 @@ describe('App spec', () => {
     cy.get('.martiniButton').should('exist').click().wait(1000)
   })
 
-  //ISSUE TO RESOLVE
-  it('should return an error message if a network request fails', () => {
+  it.only('should return an error message if a network request fails', () => {
     cy.visit('http://localhost:3000/')
     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', {
         statusCode: 404,
@@ -55,7 +53,8 @@ describe('App spec', () => {
           error: 'Not Found'
         }
       })
-      .get('.error').should('have.value', true)
+      .get('.errorMessage')
+      cy.contains("You didn't break the internet, but we can't find what you are looking for... Please try again later.")
   })
 
   
