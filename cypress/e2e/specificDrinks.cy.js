@@ -38,7 +38,7 @@ describe('Specific spec', () => {
         // cy.get('.ingredientsTitle').contains('Amaretto Stone Sour Alternative') 
     })
 
-    it('should return an error message if a network request fails', () => {
+    it('should return an error message if a network request fails to fetch specialty drinks', () => {
         cy.visit('http://localhost:3000/MartiniDeck')
         cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini', {
             statusCode: 404,
