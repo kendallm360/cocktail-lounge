@@ -6,8 +6,8 @@ describe('App spec', () => {
     })
   })
 
-  it('should display heading on page load', () => {
-    cy.get('h1').should('have.text', 'CockTail Lounge')
+  it.only('should display heading on page load', () => {
+    cy.get('h1').should('have.text', 'The CockTail Lounge 〄')
   })
   
   it('should display four randomized cocktails each time the page loads', () => {
