@@ -1,9 +1,11 @@
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   text-decoration: none;
 }
 
 .App {
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
+  /* height: 30vh; */
+  /* border: 3px solid pink; */
 }

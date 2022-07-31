@@ -3,6 +3,7 @@ import "./MartiniDeck.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import { Drink, Props, TypeState } from "../Types";
 import { Link } from "react-router-dom";
+import Error from "../Error/error";
 
 class MartiniDeck extends Component<{}, TypeState> {
   constructor(props: Props) {
@@ -15,30 +16,36 @@ class MartiniDeck extends Component<{}, TypeState> {
   }
 
   componentDidMount = () => {
-    fetchSpecialtyCocktails("search.php?s=martini").then((data) => {
-      this.setState({ drinkList: data.drinks });
-    });
+    fetchSpecialtyCocktails("search.php?s=martini")
+      .then((data) => {
+        this.setState({ drinkList: data.drinks });
+      })
+      .catch(() => {
+        this.setState({ error: true });
+      });
   };
 
   formatMartinis = () => {
     return this.state.drinkList.map((martini: Drink) => {
       return (
         <div className="deckContainer">
-        <Link to={`/drinks/${martini.idDrink}`}>
-          <div
-            className="martiniDrink"
-            id={martini.idDrink}>
-            <img className ="drink-image" src={martini.strDrinkThumb} />
-            <h2>{martini.strDrink}</h2>
-          </div>
-        </Link>
+          <Link to={`/drinks/${martini.idDrink}`}>
+            <div className="martiniDrink" id={martini.idDrink}>
+              <img className="drink-image" src={martini.strDrinkThumb} />
+              <h2>{martini.strDrink}</h2>
+            </div>
+          </Link>
         </div>
       );
     });
   };
 
   render() {
-    return <div className="martiniContainer">{this.formatMartinis()}</div>;
+    return (
+      <div className="martiniContainer">
+        {this.state.error ? <Error /> : <>{this.formatMartinis()}</>}
+      </div>
+    );
   }
 }
 export default MartiniDeck;

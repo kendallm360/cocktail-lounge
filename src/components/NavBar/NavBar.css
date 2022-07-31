@@ -3,23 +3,22 @@
 }
 
 h1 {
-  font-family: 'Cormorant SC', serif;
+  font-family: "Cormorant SC", serif;
   color: black;
   font-size: 5em;
 }
 h1:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: all .8s;
+  transition: all 0.8s;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
-    
 }
 
 .nav-bar {
-  background-color: #F6F6F6;
+  height: 20vh;
+  background-color: #f6f6f6;
   color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-

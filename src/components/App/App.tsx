@@ -10,7 +10,7 @@ import { Drink, Props, TypeState } from "../Types";
 import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
 import Error from "../Error/error";
-
+import AppContainer from "../AppContainer/AppContainer";
 
 class App extends React.Component<{}, TypeState> {
   constructor(props: Props) {
@@ -28,30 +28,45 @@ class App extends React.Component<{}, TypeState> {
   };
 
   componentDidMount = () => {
-    fetchAllCocktails().then((data) => {
-      this.setState({
-        drinkList: this.getRandomDrink(data.drinks),
+    fetchAllCocktails()
+      .then((data) => {
+        this.setState({
+          drinkList: this.getRandomDrink(data.drinks),
+        });
+      })
+      .catch(() => {
+        this.setState({ error: true });
       });
-    }).catch(() => {
-      this.setState({ error: true });
-    })
   };
-
 
   render() {
     return (
       <div>
         <NavBar />
-        
-        {this.state.error && <Error />}
+        {/* {this.state.error && <Error />} */}
 
-          <Route exact path="/">
+        <Route exact path="/">
           <div className="App">
-            <RandomContainer drinkList={this.state.drinkList} error={false} />
-            <SpecialtyContainer />
+            {/* <RandomContainer
+              drinkList={this.state.drinkList}
+              error={this.state.error}
+            />
+            <SpecialtyContainer
+              error={this.state.error}
+              idDrink={""}
+              strDrink={""}
+              strDrinkThumb={""}
+            /> */}
+            <AppContainer
+              drinkList={this.state.drinkList}
+              error={this.state.error}
+            />
           </div>
         </Route>
-        
+
+        <Route exact path="/?/error">
+          <Error />
+        </Route>
 
         <Route exact path="/MartiniDeck">
           <MartiniDeck />
@@ -60,13 +75,13 @@ class App extends React.Component<{}, TypeState> {
         <Route exact path="/AmarettoDeck">
           <AmarettoDeck />
         </Route>
-        
+
         <Route
-        exact
-        path="/drinks/:id"
-        render={({ match }) => {
-          return <DetailCards id={match.params.id} />;
-        }}
+          exact
+          path="/drinks/:id"
+          render={({ match }) => {
+            return <DetailCards id={match.params.id} />;
+          }}
         />
       </div>
     );
