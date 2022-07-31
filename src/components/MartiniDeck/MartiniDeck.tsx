@@ -23,14 +23,16 @@ class MartiniDeck extends Component<{}, TypeState> {
   formatMartinis = () => {
     return this.state.drinkList.map((martini: Drink) => {
       return (
+        <div className="deckContainer">
         <Link to={`/drinks/${martini.idDrink}`}>
           <div
             className="martiniDrink"
             id={martini.idDrink}>
-            <h1>{martini.strDrink}</h1>
-            <img src={martini.strDrinkThumb} />
+            <img className ="drink-image" src={martini.strDrinkThumb} />
+            <h2>{martini.strDrink}</h2>
           </div>
         </Link>
+        </div>
       );
     });
   };
