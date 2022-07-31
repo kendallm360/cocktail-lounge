@@ -45,7 +45,7 @@ describe('App spec', () => {
     cy.get('.martiniButton').should('exist').click().wait(1000)
   })
 
-  it.only('should return an error message if a network request fails', () => {
+  it('should return an error message if a network request fails', () => {
     cy.visit('http://localhost:3000/')
     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', {
         statusCode: 404,
