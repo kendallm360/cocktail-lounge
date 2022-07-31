@@ -1,6 +1,13 @@
 * {
   text-decoration: none;
 }
+
+h1 {
+  font-family: 'Cormorant SC', serif;
+  color: black;
+  font-size: 5em;
+}
+
 .nav-bar {
   background-color: #F6F6F6;
   color: black;

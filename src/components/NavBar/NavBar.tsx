@@ -7,10 +7,9 @@ const NavBar: FC = () => {
     <div className="nav-bar">
       <article>
         <Link to="/">
-          <h1>CockTail Lounge</h1>
+          <h1>The CockTail Lounge 〄</h1>
         </Link>
       </article>
-      <button className="favorite-button">Favorite Draaanks</button>
     </div>
   );
 };
