@@ -22,12 +22,14 @@ class AmarettoDeck extends Component<{}, TypeState> {
   formatAmarettos = () => {
     return this.state.drinkList.map((amaretto: Drink) => {
       return (
+        <div className="deckContainer">
         <Link to={`/drinks/${amaretto.idDrink}`}>
-          <div>
-          <h1>{amaretto.strDrink}</h1>
-          <img src={amaretto.strDrinkThumb} />
+          <div className="amaretto-drink">
+          <img className="drink-image" src={amaretto.strDrinkThumb} />
+          <h2>{amaretto.strDrink}</h2>
           </div>
         </Link>
+         </div >
       );
     });
   };

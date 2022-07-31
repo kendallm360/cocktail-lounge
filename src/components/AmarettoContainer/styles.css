@@ -1,24 +1,29 @@
 .amarettoButton {
-  border: 2px solid teal;
+color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   align-items: center;
+  justify-content: baseline;
+  margin-bottom: 50px;
+  margin-right: 10%;
 }
 
 h3 {
-  font-size: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .amarettoButton:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  transition: all 0.3s;
-  filter: brightness(120%);
+  transform: scale(1.1);
+  transition: all .8s;
 }
 
 .amarettoImage {
-  height: 275px;
-  width: 275px;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 40%;
+  margin-top: 5%;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
 }

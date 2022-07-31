@@ -1,10 +1,25 @@
+* {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Cormorant SC', serif;
+  color: black;
+  font-size: 5em;
+}
+h1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all .8s;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
 .nav-bar {
+  background-color: #F6F6F6;
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 5px solid teal;
 }
 
-.favorite-button {
-  margin-left: 50em;
-}

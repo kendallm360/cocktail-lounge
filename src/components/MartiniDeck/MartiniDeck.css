@@ -1,45 +1,22 @@
-
-/* img {
-    height: 20%;
-    width: 20%
-} */
-
-/* .details {
-border: 1px solid black;
-display:flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-align-content: center;
-width: 50%;
-} */
-
-/* .ingredients {
-border: 2px solid pink;
-width: 20%;
-height: 20%;
-}
-
-.instructions {
-border: 2px solid pink;
-width: 80%;
-height: 20%;
-} */
-
-
 .martiniContainer {
-    display: grid;
+display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(4, 1fr); */
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    margin-left: 120px;
-    margin-top: 60px;
-    margin-bottom: 70px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
 }
 
-.drink-card {
-    border: 2px solid black;
+.deckContainer {
+    height: 65%;
+    width:65%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 
 .drink-image {
@@ -48,4 +25,21 @@ height: 20%;
     height: 80%;
     width: 80%;
     margin-top: 10%;
+}
+
+.martiniDrink {
+    color: black;
+    background-color: azure;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.martiniDrink:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .8s;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
 }

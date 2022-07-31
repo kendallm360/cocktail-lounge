@@ -11,7 +11,7 @@ const AmarettoContainer: FC = () => {
       <Link to="/AmarettoDeck">
         <div className="amarettoButton">
           <img className="amarettoImage" src={AmarettoImage} />
-          <h3>13 Amaretto drinks that will satisfy your sweet tooth</h3>
+          <h3>15 Amaretto drinks to satisfy your sweet tooth</h3>
         </div>
       </Link>
     </div>
