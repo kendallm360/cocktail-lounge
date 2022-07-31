@@ -38,16 +38,13 @@ describe('Specific spec', () => {
         // cy.get('.ingredientsTitle').contains('Amaretto Stone Sour Alternative') 
     })
 
-    // it.only('should return an error message if a network request fails', () => {
-    //     cy.visit('http://localhost:3000/MartiniDeck').wait(1000)
-    //     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini', {
-    //         statusCode: 404,
-    //         body: {
-    //             error: 'Not Found'
-    //         }
-    //     })
-    //     .get('.errorMessage')
-    //     cy.contains("You didn't break the internet, but we can't find what you are looking for... Please try again later.")
-    // })
+    it('should return an error message if a network request fails', () => {
+        cy.visit('http://localhost:3000/MartiniDeck')
+        cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini', {
+            statusCode: 404,
+        })
+        .get('.errorMessage')
+        cy.contains("You didn't break the internet, but we can't find what you are looking for... Please try again later.")
+    })
 
 })
