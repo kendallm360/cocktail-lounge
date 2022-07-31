@@ -23,9 +23,9 @@ class AmarettoDeck extends Component<{}, TypeState> {
     return this.state.drinkList.map((amaretto: Drink) => {
       return (
         <Link to={`/drinks/${amaretto.idDrink}`}>
-          <div>
-          <h1>{amaretto.strDrink}</h1>
-          <img src={amaretto.strDrinkThumb} />
+          <div className="drink-card">
+          <img className="drink-image" src={amaretto.strDrinkThumb} />
+          <h2>{amaretto.strDrink}</h2>
           </div>
         </Link>
       );

@@ -1,32 +1,3 @@
-
-/* img {
-    height: 20%;
-    width: 20%
-} */
-
-/* .details {
-border: 1px solid black;
-display:flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-align-content: center;
-width: 50%;
-} */
-
-/* .ingredients {
-border: 2px solid pink;
-width: 20%;
-height: 20%;
-}
-
-.instructions {
-border: 2px solid pink;
-width: 80%;
-height: 20%;
-} */
-
-
 .martiniContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
