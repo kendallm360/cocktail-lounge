@@ -2,7 +2,6 @@ import { FC } from "react";
 import "./SpecialtyContainer.css";
 import MartiniContainer from "../MartiniContainer/MartiniContainer";
 import AmarettoContainer from "../AmarettoContainer";
-import { TypeState } from "../Types";
 
 const SpecialtyContainer: FC = () => {
   return (
@@ -14,8 +13,3 @@ const SpecialtyContainer: FC = () => {
 };
 
 export default SpecialtyContainer;
-
-
-
-
-

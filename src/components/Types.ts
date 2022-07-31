@@ -1,7 +1,7 @@
 export type TypeState = {
   drinkList: Drink[];
   id?: string;
-  error: false | true
+  error?: false | true;
 };
 
 export type Drink = {
@@ -20,6 +20,7 @@ export type Drink = {
   strIngredient9?: string | null;
   strIngredient10?: string | null;
   strIngredient11?: string | null;
+  error?: false | true;
 };
 
 export type Props = {

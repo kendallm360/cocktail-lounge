@@ -3,6 +3,7 @@ import "./styles.css";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import { Drink, Props, TypeState } from "../Types";
 import { Link } from "react-router-dom";
+import Error from "../Error/error";
 
 class AmarettoDeck extends Component<{}, TypeState> {
   constructor(props: Props) {
@@ -14,28 +15,36 @@ class AmarettoDeck extends Component<{}, TypeState> {
   }
 
   componentDidMount = () => {
-    fetchSpecialtyCocktails("search.php?s=amaretto").then((data) => {
-      this.setState({ drinkList: data.drinks });
-    });
+    fetchSpecialtyCocktails("search.php?s=amaretto")
+      .then((data) => {
+        this.setState({ drinkList: data.drinks });
+      })
+      .catch(() => {
+        this.setState({ error: true });
+      });
   };
 
   formatAmarettos = () => {
     return this.state.drinkList.map((amaretto: Drink) => {
       return (
         <div className="deckContainer">
-        <Link to={`/drinks/${amaretto.idDrink}`}>
-          <div className="amaretto-drink">
-          <img className="drink-image" src={amaretto.strDrinkThumb} />
-          <h2>{amaretto.strDrink}</h2>
-          </div>
-        </Link>
-         </div >
+          <Link to={`/drinks/${amaretto.idDrink}`}>
+            <div className="amaretto-drink">
+              <img className="drink-image" src={amaretto.strDrinkThumb} />
+              <h2>{amaretto.strDrink}</h2>
+            </div>
+          </Link>
+        </div>
       );
     });
   };
 
   render() {
-    return <div className="AmarettoContainer">{this.formatAmarettos()}</div>;
+    return (
+      <div className="AmarettoContainer">
+        {this.state.error ? <Error /> : <>{this.formatAmarettos()}</>}
+      </div>
+    );
   }
 }
 export default AmarettoDeck;

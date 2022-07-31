@@ -1,4 +1,17 @@
 .errorMessage {
-    font-size: 100px;
-    color:red;
+  font-size: 50px;
+  color: red;
+}
+
+.errorImage {
+  width: 30%;
+}
+
+.errorDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }

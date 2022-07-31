@@ -1,49 +1,49 @@
-
 .detailCards {
-    background-image:url(../../images/triangles.jpeg);
-    background-repeat: repeat;
+  background-image: url(../../images/triangles.jpeg);
+  background-repeat: repeat;
 }
 
 .stats {
-    margin-top: 3%;
-    margin-right:5%;
-    margin-left: 5%;
-    display:flex;
-    flex-direction: column;
-    background: #F6F6F6;
-    border: 20px solid white;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
-    width: 40%;
+  margin-top: 3%;
+  margin-right: 5%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f6;
+  border: 20px solid white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  width: 40%;
 }
 
 .detail-drink-card {
-    display:flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .detailTitle {
-    font-size: 40px;
-    height: 60%;
-    width: 100%;
-    padding:5%;
-    align-items: center;
-    align-content: center;
-    margin-bottom: 0%;
-} 
-
-.detail-drink-image {
-    margin-top: 3%;
-    margin-left: 5%;
-    border: 20px solid white;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
-    height: 40%;
-    width: 30%;
-} 
-
-.ingredients, .instructions {
-    padding: 5%;
+  font-size: 40px;
+  height: 60%;
+  width: 100%;
+  padding: 5%;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 0%;
 }
 
-.ingredientsTitle, .preparationTitle {
-    font-size:40px;
+.detail-drink-image {
+  margin-top: 3%;
+  margin-left: 5%;
+  border: 20px solid white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  width: 30%;
+}
+
+.ingredients,
+.instructions {
+  padding: 5%;
+}
+
+.ingredientsTitle,
+.preparationTitle {
+  font-size: 40px;
 }
