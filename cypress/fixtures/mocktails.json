@@ -1,0 +1,24 @@
+{
+    "drinks": [
+    {
+        "strDrink": "Brooklyn",
+        "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/ojsezf1582477277.jpg",
+        "idDrink": "178310"
+        },
+        {
+        "strDrink": "Casa Blanca",
+        "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/usspxq1441553762.jpg",
+        "idDrink": "11222"
+        },
+        {
+        "strDrink": "Casino",
+        "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/1mvjxg1504348579.jpg",
+        "idDrink": "17185"
+        },
+        {
+        "strDrink": "Cherry Rum",
+        "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/twsuvr1441554424.jpg",
+        "idDrink": "11239"
+        }
+    ]
+}

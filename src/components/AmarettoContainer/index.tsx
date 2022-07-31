@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const AmarettoContainer: FC = () => {
 
   return (
-    <div>
+    <div className='amaretto-container'>
       <Link to="/AmarettoDeck">
         <div className="amarettoButton">
           <img className="amarettoImage" src={AmarettoImage} />
