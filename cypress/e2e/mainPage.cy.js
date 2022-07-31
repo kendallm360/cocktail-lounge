@@ -6,7 +6,7 @@ describe('App spec', () => {
     })
   })
 
-  it.only('should display heading on page load', () => {
+  it('should display heading on page load', () => {
     cy.get('h1').should('have.text', 'The CockTail Lounge 〄')
   })
   
@@ -20,10 +20,11 @@ describe('App spec', () => {
     cy.get('.random-container').find('.drink-card').first().click()
   })
 
-  it("should be able to use forward and back arrows to navigate between pages", () => {
+  it.only("should be able to use forward and back arrows to navigate between pages", () => {
     cy.fixture('mocktails.json').then((mocktails) => {
     cy.intercept('GET', 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass', mocktails)
-    cy.get('.random-container').find('.drink-card').first().click()
+    cy.visit('http://localhost:3000/').wait(1000)
+    cy.get('.random-container').find('.drink-card').contains('Brooklyn').click()
       .url().should("eq", "http://localhost:3000/drinks/178310")
       .go("back")
       .url().should("eq", "http://localhost:3000/")
