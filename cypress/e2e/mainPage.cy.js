@@ -24,8 +24,6 @@ describe('App spec', () => {
     cy.get('.random-container').find('.drink-card').contains('Brooklyn').click()
     cy.get('.detail-drink-card').contains('Preparation')
     cy.contains('Ingredients')
-    // .get('.ingredients').should('exist')
-    // .get('.instructions').should('exist')
   })
 
   it("should be able to use forward and back arrows to navigate between pages", () => {
@@ -51,7 +49,7 @@ describe('App spec', () => {
     cy.get('.AmarettoContainer').should('have.length', 1)
   })
     
-  it.only('should be able to click on the Martini drinks container and be routed to a new page', () => {
+  it('should be able to click on the Martini drinks container and be routed to a new page', () => {
     cy.get('.martiniButton').click()
     cy.get('.martiniContainer').should('have.length', 1)
   })
@@ -67,11 +65,5 @@ describe('App spec', () => {
       .get('.errorMessage')
       cy.contains("You didn't break the internet, but we can't find what you are looking for... Please try again later.")
   })
-
-  
-  //As a user, I should be able to click on the randomize button to see 4 new cocktail images and names displayed. #9
-  //As a user, when on the detail view page, I should be able to click on the favorite icon to store my recipe in a favorites category #12
-  //As a user, I should be able to click the favorites button in the Navbar and be routed to my favorites page #13
-  //As a user, when in the favorites view, I should not see the main page, and should be able to "un-favorite" a drink by clicking the icon #14
 
 })
