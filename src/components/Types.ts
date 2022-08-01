@@ -2,6 +2,8 @@ export type TypeState = {
   drinkList: Drink[];
   id?: string;
   error?: false | true;
+  setDrinkList?: (active: Drink[]) => void;
+  setError?: (active: false | true) => void;
 };
 
 export type Drink = {
