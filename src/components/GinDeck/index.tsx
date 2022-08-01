@@ -6,7 +6,6 @@ import { Drink } from "../Types";
 import { Link } from "react-router-dom";
 
 const GinDeck: FC = () => {
-
   const [drinkList, setDrinkList] = useState([]);
   const [error, setError] = useState(false)
 
@@ -30,7 +29,7 @@ const GinDeck: FC = () => {
       );
     });
   };
-
+  
     return (
       <div className="ginContainer">
         {error ? <Error /> : <>{formatGins()}</>}

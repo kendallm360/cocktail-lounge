@@ -12,11 +12,9 @@ import { Route } from "react-router-dom";
 import { Drink } from "../Types";
 
 const App: FC = () => {
-
   const [drinkList, setDrinkList] = useState <Drink[]> ([]);
   const [id, setId] = useState ("");
   const [error, setError] = useState(false)
-
 
   const getRandomDrink = (drinkList: Drink[]) => {
     const shuffled = drinkList.sort(() => 0.5 - Math.random());
@@ -32,7 +30,6 @@ const App: FC = () => {
     return (
       <div>
         <NavBar />
-        
         <Route exact path="/">
           <div className="App">
             <AppContainer
@@ -40,28 +37,23 @@ const App: FC = () => {
               error={error}/>
           </div>
         </Route>
-
         <Route exact path="/?/error">
           <Error />
         </Route>
-
         <Route exact path="/MartiniDeck">
           <MartiniDeck />
         </Route>
-
         <Route exact path="/AmarettoDeck">
           <AmarettoDeck />
         </Route>
-
         <Route exact path="/GinDeck">
           <GinDeck />
         </Route>
-
         <Route
           exact
           path="/drinks/:id"
           render={({ match }) => {
-            return <DetailCards id={match.params.id} />;
+            return <DetailCards id={match.params.id} drinkList={[]} />;
           }}
         />
       </div>

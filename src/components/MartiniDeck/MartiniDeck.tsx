@@ -6,7 +6,6 @@ import { Drink } from "../Types";
 import { Link } from "react-router-dom";
 
 const MartiniDeck: FC = () => {
-
     const [drinkList, setDrinkList] = useState([]);
     const [error, setError] = useState(false)
 

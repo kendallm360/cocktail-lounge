@@ -1,8 +1,7 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./styles.css";
 import AmarettoImage from "../../images/amaretto.jpeg";
 import { Link } from "react-router-dom";
-
 
 const AmarettoContainer: FC = () => {
 
