@@ -1,67 +1,49 @@
-import React from "react";
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
-import RandomContainer from "../RandomContainer/RandomContainer";
-import SpecialtyContainer from "../SpecialtyContainer/SpecialtyContainer";
 import { fetchAllCocktails } from "../../apiCalls";
 import { Route } from "react-router-dom";
 import MartiniDeck from "../MartiniDeck/MartiniDeck";
-import { Drink, Props, TypeState } from "../Types";
+import { Drink} from "../Types";
 import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
 import Error from "../Error/error";
 import AppContainer from "../AppContainer/AppContainer";
 import GinDeck from "../GinDeck";
+import {FC, useState, useEffect} from "react"
 
-class App extends React.Component<{}, TypeState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      drinkList: [],
-      id: "",
-      error: false,
-    };
-  }
+const App: FC = () => {
 
-  getRandomDrink = (drinkList: Drink[]) => {
+  const [drinkList, setDrinkList] = useState <Drink[]> ([]);
+  const [id, setId] = useState ("");
+  const [error, setError] = useState(false)
+
+
+  const getRandomDrink = (drinkList: Drink[]) => {
     const shuffled = drinkList.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 4);
   };
 
-  componentDidMount = () => {
+  useEffect(() => {
     fetchAllCocktails()
       .then((data) => {
-        this.setState({
-          drinkList: this.getRandomDrink(data.drinks),
-        });
+        let fix = getRandomDrink(data.drinks)
+        
+      setDrinkList(fix);
       })
       .catch(() => {
-        this.setState({ error: true });
+        setError( true );
       });
-  };
+  }, [])
 
-  render() {
     return (
       <div>
         <NavBar />
-        {/* {this.state.error && <Error />} */}
 
         <Route exact path="/">
           <div className="App">
-            {/* <RandomContainer
-              drinkList={this.state.drinkList}
-              error={this.state.error}
-            />
-            <SpecialtyContainer
-              error={this.state.error}
-              idDrink={""}
-              strDrink={""}
-              strDrinkThumb={""}
-            /> */}
             <AppContainer
-              drinkList={this.state.drinkList}
-              error={this.state.error}
-            />
+              drinkList={drinkList}
+              error={error}/>
           </div>
         </Route>
 
@@ -90,7 +72,6 @@ class App extends React.Component<{}, TypeState> {
         />
       </div>
     );
-  }
 }
 
 export default App;
