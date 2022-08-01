@@ -1,32 +1,24 @@
-import { Component, MouseEvent } from "react";
 import "./MartiniDeck.css";
-import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { Drink, Props, TypeState } from "../Types";
-import { Link } from "react-router-dom";
 import Error from "../Error/error";
+import { FC, useState, useEffect } from "react"
+import { fetchSpecialtyCocktails } from "../../apiCalls";
+import { Drink } from "../Types";
+import { Link } from "react-router-dom";
 
-class MartiniDeck extends Component<{}, TypeState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      drinkList: [],
-      id: "",
-      error: false,
-    };
-  }
+const MartiniDeck: FC = () => {
+    const [drinkList, setDrinkList] = useState([]);
+    const [error, setError] = useState(false)
 
-  componentDidMount = () => {
+  useEffect(() => {
     fetchSpecialtyCocktails("search.php?s=martini")
       .then((data) => {
-        this.setState({ drinkList: data.drinks });
-      })
-      .catch(() => {
-        this.setState({ error: true });
+        setDrinkList(data.drinks)})
+      .catch(() => {setError(true);
       });
-  };
+  }, [])
 
-  formatMartinis = () => {
-    return this.state.drinkList.map((martini: Drink) => {
+  const formatMartinis = () => {
+    return drinkList.map((martini: Drink) => {
       return (
         <div className="deckContainer">
           <Link to={`/drinks/${martini.idDrink}`}>
@@ -39,13 +31,11 @@ class MartiniDeck extends Component<{}, TypeState> {
       );
     });
   };
-
-  render() {
+    
     return (
       <div className="martiniContainer">
-        {this.state.error ? <Error /> : <>{this.formatMartinis()}</>}
+        {error ? <Error /> : <>{formatMartinis()}</>}
       </div>
     );
-  }
 }
 export default MartiniDeck;

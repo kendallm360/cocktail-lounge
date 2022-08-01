@@ -1,32 +1,22 @@
-import { Component, MouseEvent } from "react";
 import "./styles.css";
-import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { Drink, Props, TypeState } from "../Types";
-import { Link } from "react-router-dom";
 import Error from "../Error/error";
+import { FC, useState, useEffect } from "react";
+import { fetchSpecialtyCocktails } from "../../apiCalls";
+import { Drink } from "../Types";
+import { Link } from "react-router-dom";
 
-class GinDeck extends Component<{}, TypeState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      drinkList: [],
-      id: "",
-      error: false,
-    };
-  }
+const GinDeck: FC = () => {
+  const [drinkList, setDrinkList] = useState([]);
+  const [error, setError] = useState(false)
 
-  componentDidMount = () => {
+  useEffect(() => {
     fetchSpecialtyCocktails("search.php?s=gin")
-      .then((data) => {
-        this.setState({ drinkList: data.drinks });
-      })
-      .catch(() => {
-        this.setState({ error: true });
-      });
-  };
+      .then((data) => {setDrinkList(data.drinks)})
+      .catch(() => {setError( true )});
+  }, []);
 
-  formatGins = () => {
-    return this.state.drinkList.map((gin: Drink) => {
+  const formatGins = () => {
+    return drinkList.map((gin: Drink) => {
       return (
         <div className="deckContainer">
           <Link to={`/drinks/${gin.idDrink}`}>
@@ -39,13 +29,11 @@ class GinDeck extends Component<{}, TypeState> {
       );
     });
   };
-
-  render() {
+  
     return (
       <div className="ginContainer">
-        {this.state.error ? <Error /> : <>{this.formatGins()}</>}
+        {error ? <Error /> : <>{formatGins()}</>}
       </div>
     );
-  }
 }
 export default GinDeck;
