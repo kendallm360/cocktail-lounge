@@ -1,15 +1,15 @@
 import "./App.css";
 import NavBar from "../NavBar/NavBar";
-import { fetchAllCocktails } from "../../apiCalls";
-import { Route } from "react-router-dom";
+import GinDeck from "../GinDeck";
 import MartiniDeck from "../MartiniDeck/MartiniDeck";
-import { Drink} from "../Types";
 import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
-import Error from "../Error/error";
 import AppContainer from "../AppContainer/AppContainer";
-import GinDeck from "../GinDeck";
+import Error from "../Error/error";
 import {FC, useState, useEffect} from "react"
+import { fetchAllCocktails } from "../../apiCalls";
+import { Route } from "react-router-dom";
+import { Drink } from "../Types";
 
 const App: FC = () => {
 
@@ -25,20 +25,14 @@ const App: FC = () => {
 
   useEffect(() => {
     fetchAllCocktails()
-      .then((data) => {
-        let fix = getRandomDrink(data.drinks)
-        
-      setDrinkList(fix);
-      })
-      .catch(() => {
-        setError( true );
-      });
+      .then((data) => { setDrinkList(getRandomDrink(data.drinks)) })
+      .catch(() => { setError( true ) });
   }, [])
 
     return (
       <div>
         <NavBar />
-
+        
         <Route exact path="/">
           <div className="App">
             <AppContainer
