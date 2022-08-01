@@ -20,7 +20,14 @@
 [Github Repo](https://github.com/kendallm360/cocktail-lounge)
 
 ## Demo:
-![Demo]()
+### Generating 4 new random cocktails... Shake It Up!
+![Demo](https://media.giphy.com/media/KByPNyy04fPvSoZ5ts/giphy.gif)
+
+### Selecting a specific random cocktail and returning to the main page.
+![Demo2](https://media.giphy.com/media/NAjwdTrQmtByT57AiJ/giphy.gif)
+
+### Selecting specialty cocktails and returning to the main page.
+![Demo3](https://media.giphy.com/media/PwZ8Sg3z3chEkxCCRg/giphy.gif)
 
 ## Project Spec:
 [Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
@@ -55,17 +62,22 @@ To run the application on a local machine:
 ### Wins
 * Gaining a basic understanding of TypeScript and implementing it in our project
 * Enhancing our knowledge of current React best practices by applying Hooks to our project
+* Collabrotive learning environment
+* Lighthouse score of $$$
 
 ### Challenges
-* Some initial struggle with implementing TypeScript
+* Some initial struggle implementing TypeScript without Hooks
+* Deciphering the endpoints in sour API fetch calls
+* Stubbing and intercepting in Cypress
 
 ## Future Additions:
 * Favorites section: functionality for the user to be able to favorite and un-favorite their drinks
 * On initial page load, a Modal should po up to confirm the user is over 21 years of age
+* Add more reponsive layout design for mobile devices
 
 
 ## Contributors:
-* [Jordan Sullivan]()
+* [Jordan Sullivan](https://github.com/jordan-sullivan)
 * [Kendall McGree](https://github.com/kendallm360)
 * [Nathan Hodnett](https://github.com/nhodnett)
 
