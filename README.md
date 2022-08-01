@@ -1,4 +1,4 @@
-# The CockTail Lounge - Stretch Project
+# The CockTail Lounge - Mod3 Stretch Project
 
 ## Contents:
 * [Deployed App](#deployed-app)
@@ -17,7 +17,7 @@
 [Deployed App]()
 
 ## Github Repo:
-[Github Repo]()
+[Github Repo](https://github.com/kendallm360/cocktail-lounge)
 
 ## Demo:
 ![Demo]()
@@ -26,7 +26,7 @@
 [Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 ## Overview:
-* Imagine, you're out with friends at the newest bar in town and you are waiting in line for a drink. It's finally your turn to order- and you FREEZE. You can't think of a single fun cocktail to order. "Shake it Up" to see random cocktails, or browse our favorites below so you're never again stuck wondering, "What should I order?"
+Imagine, you're out with friends at the newest bar in town and you are waiting in line for a drink. It's finally your turn to order- and you FREEZE. You can't think of a single fun cocktail to order. "Shake it Up" to see random cocktails, or browse our favorites below so you're never again stuck wondering, "What should I order?"
 
 ## Setup Instructions:
 To run the application on a local machine:
@@ -38,32 +38,35 @@ To run the application on a local machine:
 * Web App will open in separate browser
 
 ## Technologies Used:
-* Github
+* TypeScript
 * React
 * HTML5
 * CSS
 * Cypress
 * Router
 * Heroku Deployment
-* TypeScript
+* Github
 
 ## Learning Goals and Project Reflections:
 ### Learning Goals
-* TypeScript
+* Research and implement TypeScript
 * Practice using React, Router, Asynchronous Javascript and Cypress end to end testing
 
 ### Wins
-*
+* Gaining a basic understanding of TypeScript and implementing it in our project
+* Enhancing our knowledge of current React best practices by applying Hooks to our project
 
 ### Challenges
-*
+* Some initial struggle with implementing TypeScript
 
 ## Future Additions:
-*
+* Favorites section: functionality for the user to be able to favorite and un-favorite their drinks
+* On initial page load, a Modal should po up to confirm the user is over 21 years of age
+
 
 ## Contributors:
 * [Jordan Sullivan]()
-* [Kendall McGree]()
+* [Kendall McGree](https://github.com/kendallm360)
 * [Nathan Hodnett](https://github.com/nhodnett)
 
 
