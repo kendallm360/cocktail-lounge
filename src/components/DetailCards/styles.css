@@ -3,47 +3,44 @@
   background-repeat: repeat;
 }
 
-.stats {
-  margin-top: 3%;
-  margin-right: 5%;
-  margin-left: 5%;
-  display: flex;
-  flex-direction: column;
-  background: #f6f6f6;
-  border: 20px solid white;
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
-  width: 40%;
-}
-
 .detail-drink-card {
+  height: 85vh;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.stats {
+  background: #f6f6f6;
+  border: 1.3em solid white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 3.7rem;
+  padding-left: 1.5em;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .detailTitle {
-  font-size: 40px;
-  height: 60%;
-  width: 100%;
-  padding: 5%;
-  align-items: center;
-  align-content: center;
+  font-size: 2.5em;
   margin-bottom: 0%;
+  text-align: center;
 }
 
 .detail-drink-image {
-  margin-top: 3%;
-  margin-left: 5%;
-  border: 20px solid white;
+  border: 1.3em solid white;
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
-  width: 30%;
+  margin-top: 3.7rem;
+  width: 30vw;
 }
 
-.ingredients,
-.instructions {
-  padding: 5%;
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  height: 5vh;
 }
 
 .ingredientsTitle,
 .preparationTitle {
-  font-size: 40px;
+  font-size: 2em;
 }

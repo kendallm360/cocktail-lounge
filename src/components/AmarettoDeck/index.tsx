@@ -6,14 +6,17 @@ import { Drink } from "../Types";
 import { Link } from "react-router-dom";
 
 const AmarettoDeck: FC = () => {
-
   const [drinkList, setDrinkList] = useState([]);
   const [error, setError] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     fetchSpecialtyCocktails("search.php?s=amaretto")
-      .then((data) => {setDrinkList(data.drinks)})
-      .catch(() => {setError(true)});
+      .then((data) => {
+        setDrinkList(data.drinks);
+      })
+      .catch(() => {
+        setError(true);
+      });
   }, []);
 
   const formatAmarettos = () => {
@@ -29,12 +32,13 @@ const AmarettoDeck: FC = () => {
         </div>
       );
     });
+    // .filter((amaretto) => amaretto.strDrink === "Amaretto Liqueur");
   };
 
-    return (
-      <div className="AmarettoContainer">
-        {error ? <Error /> : <>{formatAmarettos()}</>}
-      </div>
-    );
-}
+  return (
+    <div className="AmarettoContainer">
+      {error ? <Error /> : <>{formatAmarettos()}</>}
+    </div>
+  );
+};
 export default AmarettoDeck;
