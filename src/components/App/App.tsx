@@ -11,6 +11,7 @@ import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
 import Error from "../Error/error";
 import AppContainer from "../AppContainer/AppContainer";
+import GinDeck from "../GinDeck";
 
 class App extends React.Component<{}, TypeState> {
   constructor(props: Props) {
@@ -74,6 +75,10 @@ class App extends React.Component<{}, TypeState> {
 
         <Route exact path="/AmarettoDeck">
           <AmarettoDeck />
+        </Route>
+
+        <Route exact path="/GinDeck">
+          <GinDeck />
         </Route>
 
         <Route
