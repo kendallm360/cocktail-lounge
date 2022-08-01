@@ -1,31 +1,23 @@
-import { Component } from "react";
 import "./styles.css";
-import { fetchSpecialtyCocktails } from "../../apiCalls";
-import { Drink, Props, TypeState } from "../Types";
-import { Link } from "react-router-dom";
 import Error from "../Error/error";
+import { FC, useState, useEffect } from "react";
+import { fetchSpecialtyCocktails } from "../../apiCalls";
+import { Drink } from "../Types";
+import { Link } from "react-router-dom";
 
-class AmarettoDeck extends Component<{}, TypeState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      drinkList: [],
-      error: false,
-    };
-  }
+const AmarettoDeck: FC = () => {
 
-  componentDidMount = () => {
+  const [drinkList, setDrinkList] = useState([]);
+  const [error, setError] = useState(false);
+
+ useEffect(() => {
     fetchSpecialtyCocktails("search.php?s=amaretto")
-      .then((data) => {
-        this.setState({ drinkList: data.drinks });
-      })
-      .catch(() => {
-        this.setState({ error: true });
-      });
-  };
+      .then((data) => {setDrinkList(data.drinks)})
+      .catch(() => {setError(true)});
+  }, []);
 
-  formatAmarettos = () => {
-    return this.state.drinkList.map((amaretto: Drink) => {
+  const formatAmarettos = () => {
+    return drinkList.map((amaretto: Drink) => {
       return (
         <div className="deckContainer">
           <Link to={`/drinks/${amaretto.idDrink}`}>
@@ -39,12 +31,10 @@ class AmarettoDeck extends Component<{}, TypeState> {
     });
   };
 
-  render() {
     return (
       <div className="AmarettoContainer">
-        {this.state.error ? <Error /> : <>{this.formatAmarettos()}</>}
+        {error ? <Error /> : <>{formatAmarettos()}</>}
       </div>
     );
-  }
 }
 export default AmarettoDeck;
