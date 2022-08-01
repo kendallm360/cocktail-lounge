@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const AppContainer: FC<TypeState> = ({ drinkList, error }) => {
   return (
-    <div>
+    <div className="app-wrapper">
       {error ? (
         <Link to={"/?/error"}>
           <Error />

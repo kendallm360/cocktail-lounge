@@ -17,6 +17,7 @@ const RandomContainer: FC<TypeState> = ({ drinkList }) => {
 
   return (
     <div className="random">
+      <br></br>
       <article className="blog">
         Imagine, you're out with friends at the newest bar in town and you are
         waiting in line for a drink. It's finally your turn to order- and you
@@ -24,7 +25,9 @@ const RandomContainer: FC<TypeState> = ({ drinkList }) => {
         Up" to see random cocktails, or browse our favorites below so you're
         never again stuck wondering, "What should I order?"
       </article>
+      <br></br>
       <div className="random-container">{allDrinks}</div>
+      <br></br>
       <button className="btn-shakeUp" onClick={() => window.location.reload()}>
         <span>Shake it Up!</span>
       </button>

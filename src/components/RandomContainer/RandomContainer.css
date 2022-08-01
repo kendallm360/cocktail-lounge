@@ -1,33 +1,26 @@
 * {
-text-decoration: none
+  text-decoration: none;
 }
 
 .random {
   display: flex;
   align-items: center;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .random-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 20%;
-  margin-right: 20%;
+  grid-column-gap: 9em;
   align-items: center;
 }
 
-.blog{
-  font-size: 1.3em;
-  padding:10px;
+.blog {
   border: 10px solid azure;
-  font-family: 'Cormorant SC', serif;
-  width: 60%;
+  font-family: "Cormorant SC", serif;
+  font-size: 1.3em;
+  width: 80vw;
 }
-
 
 /* - - - - - Shake It Up Button - - - - - */
 
@@ -46,7 +39,7 @@ text-decoration: none
   -webkit-appearance: button;
   color: #fff;
   cursor: pointer;
-  font-family: 'Cormorant SC', serif;
+  font-family: "Cormorant SC", serif;
   font-size: 100%;
   line-height: 1.5;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
@@ -61,7 +54,6 @@ text-decoration: none
   display: block;
   vertical-align: middle;
 }
-
 
 .btn-shakeUp {
   background: none;
@@ -150,7 +142,3 @@ text-decoration: none
     transform: translateZ(0);
   }
 }
-
-
-
-
