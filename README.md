@@ -51,6 +51,7 @@ To run the application on a local machine:
 * CSS
 * Cypress
 * Router
+* React Hooks
 * Heroku Deployment
 * Github
 
@@ -65,7 +66,7 @@ To run the application on a local machine:
 * Collabrotive learning environment
 * Lighthouse accessibility score of 100
 * No errors showing in Wave
-* Full tabbable in tabbally
+* Full tabbable in tabba11y
 
 ### Challenges
 * Some initial struggle implementing TypeScript without Hooks
