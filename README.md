@@ -63,7 +63,9 @@ To run the application on a local machine:
 * Gaining a basic understanding of TypeScript and implementing it in our project
 * Enhancing our knowledge of current React best practices by applying Hooks to our project
 * Collabrotive learning environment
-* Lighthouse score of $$$
+* Lighthouse accessibility score of 100
+* No errors showing in Wave
+* Full tabbable in tabbally
 
 ### Challenges
 * Some initial struggle implementing TypeScript without Hooks
