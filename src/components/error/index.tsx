@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import "./styles.css";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import "./Error.css";
 import ErrorImage from "../../images/drunk404.png";
 
 const Error: FC = () => {

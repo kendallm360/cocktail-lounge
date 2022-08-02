@@ -1,4 +1,4 @@
-.ginContainer {
+.martiniContainer {
   margin-top: 1em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -28,7 +28,7 @@
   margin-top: 10%;
 }
 
-.ginDrink {
+.martiniDrink {
   color: black;
   background-color: azure;
   display: flex;
@@ -38,7 +38,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.ginDrink:hover {
+.martiniDrink:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 0.8s;

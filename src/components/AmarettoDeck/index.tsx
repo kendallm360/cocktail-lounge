@@ -1,5 +1,5 @@
 import "./styles.css";
-import Error from "../Error/error";
+import Error from "../error";
 import { FC, useState, useEffect } from "react";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import { Drink } from "../Types";
@@ -32,7 +32,6 @@ const AmarettoDeck: FC = () => {
         </div>
       );
     });
-    // .filter((amaretto) => amaretto.strDrink === "Amaretto Liqueur");
   };
 
   return (

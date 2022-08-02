@@ -6,8 +6,9 @@ h1 {
   font-family: "Cormorant SC", serif;
   color: black;
   font-size: 4em;
-  /* margin-bottom: 500%; */
+  margin-top: 0.3em;
 }
+
 h1:hover {
   cursor: pointer;
   transform: scale(1.1);

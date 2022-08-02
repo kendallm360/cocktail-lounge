@@ -35,11 +35,6 @@ const DetailCards: FC<TypeState> = ({ id }) => {
                 <p>{drinkList[0].strIngredient4}</p>
                 <p>{drinkList[0].strIngredient5}</p>
                 <p>{drinkList[0].strIngredient6}</p>
-                <p>{drinkList[0].strIngredient7}</p>
-                <p>{drinkList[0].strIngredient8}</p>
-                <p>{drinkList[0].strIngredient9}</p>
-                <p>{drinkList[0].strIngredient10}</p>
-                <p>{drinkList[0].strIngredient11}</p>
               </div>
             </div>
           </div>

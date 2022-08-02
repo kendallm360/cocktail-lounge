@@ -1,7 +1,7 @@
+import "./styles.css";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Drink } from "../Types";
-import "./RandomDrinkCards.css";
 
 const RandomDrinkCards: FC<Drink> = ({ strDrink, strDrinkThumb, idDrink }) => {
   return (
@@ -10,7 +10,8 @@ const RandomDrinkCards: FC<Drink> = ({ strDrink, strDrinkThumb, idDrink }) => {
         <img
           className="drink-image"
           src={strDrinkThumb}
-          alt={`Picture${idDrink} of a cocktail stirred to perfection`}/>
+          alt={`Picture${idDrink} of a cocktail stirred to perfection`}
+        />
         <h2>{strDrink}</h2>
       </div>
     </Link>
