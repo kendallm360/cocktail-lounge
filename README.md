@@ -1,44 +1,88 @@
-# Getting Started with Create React App
+# The CockTail Lounge - Mod3 Stretch Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contents:
+* [Deployed App](#deployed-app)
+* [Github Repo](#github-repo)
+* [Demo](#demo)
+* [Project Spec](#project-spec)
+* [Overview](#overview)
+* [Setup Instructions](#setup-instructions)
+* [Technologies Used](#technologies-used)
+* [Learning Goals and Reflections](#learning-goals-and-reflections)
+* [Future Additions](#future-additions)
+* [Contributors](#contributors)
+* [Project Manager](#project-manager)
 
-## Available Scripts
+## Deployed App:
+[Deployed App]()
 
-In the project directory, you can run:
+## Github Repo:
+[Github Repo](https://github.com/kendallm360/cocktail-lounge)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo:
+### Generating 4 new random cocktails... Shake It Up!
+![Demo](https://media.giphy.com/media/KByPNyy04fPvSoZ5ts/giphy.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Selecting a specific random cocktail and returning to the main page.
+![Demo2](https://media.giphy.com/media/NAjwdTrQmtByT57AiJ/giphy.gif)
 
-### `npm test`
+### Selecting specialty cocktails and returning to the main page.
+![Demo3](https://media.giphy.com/media/PwZ8Sg3z3chEkxCCRg/giphy.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Spec:
+[Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-### `npm run build`
+## Overview:
+Imagine, you're out with friends at the newest bar in town and you are waiting in line for a drink. It's finally your turn to order- and you FREEZE. You can't think of a single fun cocktail to order. "Shake it Up" to see random cocktails, or browse our favorites below so you're never again stuck wondering, "What should I order?"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions:
+To run the application on a local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Clone down repository
+* `cd` into repository
+* Run `npm install`
+* Run `npm start`
+* Web App will open in separate browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used:
+* TypeScript
+* React
+* HTML5
+* CSS
+* Cypress
+* Router
+* Heroku Deployment
+* Github
 
-### `npm run eject`
+## Learning Goals and Project Reflections:
+### Learning Goals
+* Research and implement TypeScript
+* Practice using React, Router, Asynchronous Javascript and Cypress end to end testing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Wins
+* Gaining a basic understanding of TypeScript and implementing it in our project
+* Enhancing our knowledge of current React best practices by applying Hooks to our project
+* Collabrotive learning environment
+* Lighthouse accessibility score of 100
+* No errors showing in Wave
+* Full tabbable in tabbally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Challenges
+* Some initial struggle implementing TypeScript without Hooks
+* Deciphering the endpoints in sour API fetch calls
+* Stubbing and intercepting in Cypress
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Future Additions:
+* Favorites section: functionality for the user to be able to favorite and un-favorite their drinks
+* On initial page load, a Modal should po up to confirm the user is over 21 years of age
+* Add more reponsive layout design for mobile devices
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Contributors:
+* [Jordan Sullivan](https://github.com/jordan-sullivan)
+* [Kendall McGree](https://github.com/kendallm360)
+* [Nathan Hodnett](https://github.com/nhodnett)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Manager:
+* Scott Ertmer
