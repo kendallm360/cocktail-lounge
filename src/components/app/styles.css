@@ -3,9 +3,8 @@ body {
   text-decoration: none;
 }
 
-.App {
-  text-align: center;
+.app {
   background-color: #f6f6f6;
-  /* height: 30vh; */
-  /* border: 3px solid pink; */
+  text-align: center;
+  width: 97vw;
 }

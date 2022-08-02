@@ -5,8 +5,10 @@
 h1 {
   font-family: "Cormorant SC", serif;
   color: black;
-  font-size: 5em;
+  font-size: 4em;
+  margin-top: 0.3em;
 }
+
 h1:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -15,7 +17,7 @@ h1:hover {
 }
 
 .nav-bar {
-  height: 20vh;
+  height: 15vh;
   background-color: #f6f6f6;
   color: black;
   display: flex;

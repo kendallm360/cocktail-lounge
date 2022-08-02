@@ -1,0 +1,21 @@
+.drink-card {
+  background-color: azure;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drink-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.drink-card:hover {
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.8s;
+}

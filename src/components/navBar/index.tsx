@@ -1,6 +1,6 @@
+import "./styles.css";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
 
 const NavBar: FC = () => {
   return (

@@ -1,14 +1,14 @@
+import "./styles.css";
 import { FC } from "react";
-import RandomContainer from "../RandomContainer/RandomContainer";
-import SpecialtyContainer from "../SpecialtyContainer/SpecialtyContainer";
+import RandomContainer from "../randomContainer";
+import SpecialtyContainer from "../specialtyContainer";
 import { TypeState } from "../Types";
-import "./AppContainer.css";
-import Error from "../Error/error";
+import Error from "../error";
 import { Link } from "react-router-dom";
 
 const AppContainer: FC<TypeState> = ({ drinkList, error }) => {
   return (
-    <div>
+    <div className="app-wrapper">
       {error ? (
         <Link to={"/?/error"}>
           <Error />

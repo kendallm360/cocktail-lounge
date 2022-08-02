@@ -1,29 +1,31 @@
+.amaretto-container {
+  margin-right: 4em;
+}
+
 .amarettoButton {
-color: black;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: baseline;
-  margin-bottom: 50px;
-  margin-right: 10%;
 }
 
 h3 {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
 }
 
 .amarettoButton:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: all .8s;
+  transition: all 0.8s;
 }
 
 .amarettoImage {
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
-  height: 40%;
-  width: 40%;
-  margin-top: 5%;
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  height: 15em;
+  width: 15em;
 }

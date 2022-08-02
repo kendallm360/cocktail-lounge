@@ -1,4 +1,4 @@
-.ginButton {
+.martiniButton {
   color: black;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,13 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
-.ginButton:hover {
+.martiniButton:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all 0.8s;
 }
 
-.ginImage {
+.martiniImage {
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
   margin-top: 5%;
   display: flex;

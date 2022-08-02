@@ -1,21 +1,23 @@
-import "./MartiniDeck.css";
-import Error from "../Error/error";
-import { FC, useState, useEffect } from "react"
+import "./styles.css";
+import Error from "../error";
+import { FC, useState, useEffect } from "react";
 import { fetchSpecialtyCocktails } from "../../apiCalls";
 import { Drink } from "../Types";
 import { Link } from "react-router-dom";
 
 const MartiniDeck: FC = () => {
-    const [drinkList, setDrinkList] = useState([]);
-    const [error, setError] = useState(false)
+  const [drinkList, setDrinkList] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetchSpecialtyCocktails("search.php?s=martini")
       .then((data) => {
-        setDrinkList(data.drinks)})
-      .catch(() => {setError(true);
+        setDrinkList(data.drinks);
+      })
+      .catch(() => {
+        setError(true);
       });
-  }, [])
+  }, []);
 
   const formatMartinis = () => {
     return drinkList.map((martini: Drink) => {
@@ -31,11 +33,11 @@ const MartiniDeck: FC = () => {
       );
     });
   };
-    
-    return (
-      <div className="martiniContainer">
-        {error ? <Error /> : <>{formatMartinis()}</>}
-      </div>
-    );
-}
+
+  return (
+    <div className="martiniContainer">
+      {error ? <Error /> : <>{formatMartinis()}</>}
+    </div>
+  );
+};
 export default MartiniDeck;
