@@ -14,7 +14,7 @@
 * [Project Manager](#project-manager)
 
 ## Deployed App:
-[Deployed App]()
+[Deployed App](https://cocktail-lounge-typescript.herokuapp.com/)
 
 ## Github Repo:
 [Github Repo](https://github.com/kendallm360/cocktail-lounge)
@@ -63,13 +63,13 @@ To run the application on a local machine:
 ### Wins
 * Gaining a basic understanding of TypeScript and implementing it in our project
 * Enhancing our knowledge of current React best practices by applying Hooks to our project
-* Collabrotive learning environment
+* Collaborative learning environment
 * Lighthouse accessibility score of 100
 * No errors showing in Wave
 * Full tabbable in tabba11y
 
 ### Challenges
-* Some initial struggle implementing TypeScript without Hooks
+* Some initial struggles implementing TypeScript without Hooks
 * Deciphering the endpoints in sour API fetch calls
 * Stubbing and intercepting in Cypress
 
