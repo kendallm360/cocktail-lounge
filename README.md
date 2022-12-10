@@ -14,7 +14,7 @@
 * [Project Manager](#project-manager)
 
 ## Deployed App:
-[Deployed App](cocktail-lounge.vercel.app)
+[Deployed App]([cocktail-lounge.vercel.app](https://cocktail-lounge-jqhnunkrf-kendallm360.vercel.app/))
 
 ## Github Repo:
 [Github Repo](https://github.com/kendallm360/cocktail-lounge)
