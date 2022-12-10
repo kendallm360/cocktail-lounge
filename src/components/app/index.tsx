@@ -2,7 +2,7 @@ import "./styles.css";
 import NavBar from "../navBar";
 import GinDeck from "../GinDeck";
 import MartiniDeck from "../martiniDeck";
-import AmarettoDeck from "../amarettoDeck";
+import AmarettoDeck from "../AmarettoDeck";
 import DetailCards from "../DetailCards";
 import AppContainer from "../appContainer";
 import Error from "../error";
