@@ -1,9 +1,9 @@
 import "./styles.css";
 import NavBar from "../navBar";
-import GinDeck from "../ginDeck";
+import GinDeck from "../GinDeck";
 import MartiniDeck from "../martiniDeck";
 import AmarettoDeck from "../amarettoDeck";
-import DetailCards from "../detailCards";
+import DetailCards from "../DetailCards";
 import AppContainer from "../appContainer";
 import Error from "../error";
 import { FC, useState, useEffect } from "react";
