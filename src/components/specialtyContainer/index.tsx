@@ -1,8 +1,8 @@
 import { FC } from "react";
 import "./styles.css";
 import MartiniContainer from "../martiniContainer";
-import AmarettoContainer from "../amarettoContainer";
-import GinContainer from "../ginContainer";
+import AmarettoContainer from "../AmarettoContainer";
+import GinContainer from "../GinContainer";
 
 const SpecialtyContainer: FC = () => {
   return (
